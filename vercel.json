@@ -16,8 +16,12 @@
       "dest": "/server.js"
     },
     {
-      "src": "/(imgs|style|main)\.(jpg|jpeg|png|gif|css|js)",
-      "dest": "/$1.$2"
+      "src": "/style.css",
+      "dest": "/style.css"
+    },
+    {
+      "src": "/main.js",
+      "dest": "/main.js"
     },
     {
       "src": "/imgs/(.*)",
