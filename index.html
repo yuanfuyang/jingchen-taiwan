@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>精臣標籤機｜台灣官網</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrsasign/11.0.0/jsrsasign-all-min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">J</div>
+      <span>精臣 JingChen</span>
+    </div>
+    <nav>
+      <a href="#hero">首頁</a>
+      <a href="#products">產品系列</a>
+      <a href="#scenes">應用場景</a>
+      <a href="#support">支援服務</a>
+      <a href="#buy">購買管道</a>
+    </nav>
+    <button class="btn secondary" id="navAssistant"><span class="ai-robot"><span></span><span></span><span></span></span> AI產品助手</button>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">智能標籤 · 台灣限定</div>
+          <h1>印你所想，貼你所愛</h1>
+          <p class="lead">精臣智能標籤機，讓生活與工作井然有序。支援藍牙、長效續航，並內建海量標籤範本，輕鬆完成從家庭收納到商務倉儲的標示任務。</p>
+          <div class="actions">
+            <button class="btn" id="btnExplore"><i class="ri-compass-3-line"></i> 立即探索</button>
+            <button class="btn secondary" id="btnVideo"><i class="ri-play-circle-line"></i> 觀看影片</button>
+          </div>
+        </div>
+        <div class="hero-visual" data-parallax>
+          <img src="imgs/e33b7208ac57f191c7d7816fc2a9ea5a.jpg" alt="精臣標籤機情境">
+          <div class="badge"><i class="ri-flashlight-line"></i> AI助手即時為您解答</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>探索精臣系列</h2>
+            <p>桌面、手持到高階工業級，滿足居家、辦公、倉儲與零售多場景需求。</p>
+          </div>
+          <div class="carousel-controls" id="dots"></div>
+        </div>
+        <div class="carousel">
+          <div class="carousel-card" id="carouselCard">
+            <div class="product-photo">
+              <img id="productImage" src="" alt="產品圖">
+            </div>
+            <div class="product-meta">
+              <div class="tag" id="productTag"></div>
+              <h3 id="productTitle"></h3>
+              <ul class="bullets" id="productBullets"></ul>
+              <button class="btn secondary" id="btnCompare"><i class="ri-contrast-drop-line"></i> 查看全系列規格與比較</button>
+            </div>
+          </div>
+          <div>
+            <p class="lead">卡片式大圖輪播，呈現每款標籤機的高精度渲染與主打賣點，支援手勢滑動與點擊切換。</p>
+            <div class="actions">
+              <button class="btn" id="prev"><i class="ri-arrow-left-line"></i> 上一款</button>
+              <button class="btn" id="next">下一款 <i class="ri-arrow-right-line"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="assistant">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>AI 產品智能助手</h2>
+            <p>即時解答規格、場景搭配、耗材選擇與購買問題，並可跳轉至對應區塊。</p>
+          </div>
+          <button class="btn" id="openAssistant"><span class="ai-robot"><span></span><span></span><span></span></span> 問問小幫手</button>
+        </div>
+        <div class="assistant">
+          <div class="assistant-card">
+            <div class="eyebrow">常見提問</div>
+            <div class="faq-chips" id="faqChips"></div>
+            <div class="input-row">
+              <i class="ri-chat-1-line" style="color: var(--brand);"></i>
+              <input id="questionInput" placeholder="例如：請問B3適合用來做什麼？">
+              <button class="btn secondary" id="askBtn" style="padding: 10px 14px;">送出</button>
+            </div>
+            <div class="answer" id="answerBox">您好！我是精臣產品小幫手，有什麼可以為您解答嗎？</div>
+            <small style="color: var(--muted); display: block; margin-top: 8px;">本助手由AI驅動，資訊僅供參考，具體規格請以官方說明為準。</small>
+          </div>
+          <div>
+            <h3 style="margin-top:0;">全站可呼叫的浮動聊天窗</h3>
+            <p class="lead">右下角「AI產品助手」隨時待命，免返回區塊即可提問。</p>
+            <ul class="bullets">
+              <li><i class="ri-sparkling-2-line"></i><span>點擊常見問題直接提問，快速得到建議</span></li>
+              <li><i class="ri-cursor-line"></i><span>回答可附帶規格比較、教學連結與購買渠道</span></li>
+              <li><i class="ri-shield-check-line"></i><span>保留品牌視覺，輕量不依賴複雜框架</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="scenes" style="background: var(--bg);">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>創意應用，無所不貼</h2>
+            <p>廚房收納、文件分類、化妝標記、電纜識別、手帳裝飾與倉儲管理，皆可一機完成。</p>
+          </div>
+        </div>
+        <div class="gallery">
+          <figure>
+            <img src="imgs/2e0459f05f556e4a8e4a3aae2d8ebc91.jpg" alt="廚房收納">
+            <figcaption>廚房瓶罐分類</figcaption>
+          </figure>
+          <figure>
+            <img src="imgs/35c3dad007c79e54f8a6bf0a3e7354d9.jpg" alt="文件管理">
+            <figcaption>辦公文件管理</figcaption>
+          </figure>
+          <figure>
+            <img src="imgs/e33b7208ac57f191c7d7816fc2a9ea5a.jpg" alt="手帳裝飾">
+            <figcaption>手帳創意裝飾</figcaption>
+          </figure>
+          <figure>
+            <img src="imgs/ef82b0f400336c32dcc8ba81b088fa41.jpg" alt="倉儲標示">
+            <figcaption>倉儲標示管理</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="support">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>支援服務</h2>
+            <p>下載APP、韌體更新、標籤模板與使用教學，一站式支援。</p>
+          </div>
+          <button class="btn secondary" id="btnDownload"><i class="ri-download-2-line"></i> 下載中心</button>
+        </div>
+        <ul class="bullets">
+          <li><i class="ri-smartphone-line"></i><span>iOS / Android 精臣 APP 配對指引</span></li>
+          <li><i class="ri-router-line"></i><span>Wi-Fi / 藍牙連線快速排錯</span></li>
+          <li><i class="ri-file-list-line"></i><span>常見問題、保固與維修流程</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="buy" style="background: var(--bg);">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>購買管道</h2>
+            <p>官方授權通路，安心購買；量販/企業採購請洽專人。</p>
+          </div>
+          <div class="actions">
+            <button class="btn" id="btnShop"><i class="ri-store-2-line"></i> 前往官方商城</button>
+            <button class="btn secondary" id="btnBiz"><i class="ri-customer-service-2-line"></i> 聯絡業務</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>精臣台灣</strong><br>
+        客服信箱：service@jingchen.tw<br>
+        服務時間：週一至週五 09:30-18:00
+      </div>
+      <div class="socials">
+        <a href="#"><i class="ri-facebook-fill"></i></a>
+        <a href="#"><i class="ri-instagram-line"></i></a>
+        <a href="#"><i class="ri-youtube-fill"></i></a>
+        <a href="#"><i class="ri-line-line"></i></a>
+      </div>
+      <div style="font-size: 13px; color: #9fb0c6;">© 2024 精臣版權所有 · 服務條款 · 隱私政策</div>
+    </div>
+  </footer>
+
+  <button class="top-btn" id="toTop"><i class="ri-arrow-up-line"></i></button>
+  <button class="chat-fab" id="fab"><span class="ai-robot"><span></span><span></span><span></span></span> AI產品助手</button>
+
+  <div class="modal" id="chatModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="eyebrow">AI產品助手</div>
+        <button class="btn secondary" id="closeModal" style="padding: 8px 12px;">關閉</button>
+      </div>
+      <div class="modal-body" id="chatBody">您好！我是精臣產品小幫手，請輸入您的問題。</div>
+      <textarea rows="3" placeholder="請輸入想了解的規格、應用或購買問題..." id="chatInput"></textarea>
+      <button class="btn" id="chatSend"><i class="ri-send-plane-2-line"></i> 送出</button>
+    </div>
+  </div>
+
+  <div class="modal" id="contactModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="eyebrow">聯絡業務</div>
+        <button class="btn secondary" id="closeContact" style="padding: 8px 12px;">關閉</button>
+      </div>
+      <div class="modal-body" id="contactBody">
+        感謝您的洽詢！<br><br>
+        - 企業採購專線：(+886) 02-0000-0000<br>
+        - 業務信箱：sales@jingchen.tw<br>
+        - 客服信箱：service@jingchen.tw<br>
+        - 服務時間：週一至週五 09:30-18:00
+      </div>
+      <button class="btn" id="contactCopy"><i class="ri-file-copy-line"></i> 複製聯絡資訊</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
