@@ -1,6 +1,7 @@
 {
   "name": "jingchen-taiwan",
   "version": "1.0.0",
+  "type": "module",
   "description": "精臣標籤機台灣官網",
   "main": "server.js",
   "scripts": {
